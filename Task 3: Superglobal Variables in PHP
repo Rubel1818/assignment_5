@@ -1,0 +1,19 @@
+<?php
+  // include the Person class file if it hasn't been included yet
+  include_once 'Person.php';
+
+  // retrieve the name and email from the HTML form using $_POST
+  $name = $_POST['name'];
+  $email = $_POST['email'];
+
+  // create a new instance of the Person class
+  $person = new Person();
+
+  // set the name and email properties using the setName() and setEmail() methods
+  $person->setName($name);
+  $person->setEmail($email);
+
+  // display the name and email properties using the getName() and getEmail() methods
+  echo "Name: " . $person->getName() . "<br>";
+  echo "Email: " . $person->getEmail();
+?>
